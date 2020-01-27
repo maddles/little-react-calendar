@@ -17,10 +17,11 @@ import React, { Component } from 'react'
 
 import MyComponent from 'little-react-calendar'
 
-class Example extends Component {
+class LittleCalendar extends Component {
   render () {
     return (
-      <MyComponent />
+      <LittleCalendar 
+       	startDate={date} />
     )
   }
 }
