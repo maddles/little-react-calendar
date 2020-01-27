@@ -1,8 +1,43 @@
 /* add css styles here (optional) */
+header {
+	display: grid;
+  grid-template-columns: repeat(3, 30%);
+}
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+h1 {
+	order: 2;
+}
+
+.littleCalendarWrapper {
+	width: 500px;
+}
+
+.calWrapper {
+  display: grid;
+ 	grid-gap: 0;
+  grid-template-columns: repeat(7, auto);
+  background-color: #fff;
+  color: #444;
+}
+
+.calSquare {
+	border: 0 1px 1px 0;
+	padding: 10px;
+}
+
+.arrowRight {
+  order: 3;
+  text-align: right;
+}
+
+.arrowRight:after {
+  content:"\21D2";
+}
+
+.arrowLeft {
+  order: 1;
+}
+
+.arrowLeft:after {
+  content:"\21D0";
 }

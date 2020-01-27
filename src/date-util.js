@@ -46,3 +46,4 @@ export function getDaysInMonth (date) {
   		return _getDaysInMonth(date);
   	}
 }
+

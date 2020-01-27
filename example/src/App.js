@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'little-react-calendar'
+import LittleCalendar from 'little-react-calendar'
 
 export default class App extends Component {
   render () {
+  	const date = new Date();
+
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <LittleCalendar 
+        	startDate={date} />
       </div>
     )
   }
