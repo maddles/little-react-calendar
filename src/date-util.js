@@ -11,12 +11,12 @@ function _dateParseCheck (date) {
 	if (date instanceof Date) {
 		return date
 	}
-
-	if (typeof date === String) {
-		let parsedString = Date.parse(date)
-
-		if (!isNaN(date)) {
-			return date
+	
+	if (typeof date === 'string') {
+		let parsedString = new Date(date)
+		
+		if (!isNaN(parsedString)) {
+			return parsedString
 		}
 	}
 
@@ -42,8 +42,9 @@ function _getDaysInMonth (date) {
 
 /*returns array*/
 export function getDaysInMonth (date) {
-  	if (_dateParseCheck(date)) {
-  		return _getDaysInMonth(date);
+	const checkedDate = _dateParseCheck(date)
+  	if (checkedDate) {
+  		return _getDaysInMonth(checkedDate);
   	}
 }
 
