@@ -15,7 +15,7 @@ npm install --save little-react-calendar
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'little-react-calendar'
+import LittleCalendar from 'little-react-calendar'
 
 class LittleCalendar extends Component {
   render () {
