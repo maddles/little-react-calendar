@@ -2,6 +2,7 @@
 header {
 	display: grid;
   grid-template-columns: repeat(3, 30%);
+  align-items: center;
 }
 
 h1 {
@@ -23,21 +24,53 @@ h1 {
 .calSquare {
 	border: 0 1px 1px 0;
 	padding: 10px;
+  cursor: pointer;
+  user-select: none;
 }
 
-.arrowRight {
+.calSquare.disabled {
+  color: #D3D3D3;
+  cursor: default;
+}
+
+.calSquare.active {
+  background: #C6D7DC;
+  color: #fff;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrow::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+
+.arrow.arrowRight {
   order: 3;
   text-align: right;
 }
 
-.arrowRight:after {
-  content:"\21D2";
+.arrow.arrowRight::before {
+  left: 0;
+  transform: rotate(45deg);
 }
 
-.arrowLeft {
+.arrow.arrowLeft {
   order: 1;
 }
 
-.arrowLeft:after {
-  content:"\21D0";
+.arrow.arrowLeft::before {
+  left: 0.25em;
+  transform: rotate(-135deg);
 }
